@@ -12,19 +12,10 @@ npm install ralph-module-streamify
 
 ### **In the nuxt.config.js file inside your project:**
 
-On row 401, just after importing applicationinsights, add:
+Add below to your list of modules
 
 ```JavaScript
 ['ralph-module-streamify', {enabled: true}]
-```
-
-On row 219, just after regitering other imported components, add below object:
-
-```JavaScript
-{
-   path: '~/node_modules/ralph-module-streamify/lib/components/organisms',
-   extensions: ['vue'],
-}
 ```
 
 ### **Ralph-ride the CaWidgetArea molecule (npm run ralph-ride)**
@@ -50,7 +41,7 @@ getWidgetsIncludingJson(array){
     })
 }
 ```
-On row 125, replace:
+In your computed Containers function, replace:
 
 ```JavaScript
 ? this.widgetArea.containers

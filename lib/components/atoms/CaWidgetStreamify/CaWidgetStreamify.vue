@@ -32,19 +32,7 @@
     }),
     computed: {},
     watch: {},
-    mounted() {
-        // if (!this.scriptLoaded) {
-        //     const script = document.createElement('script');
-        //     script.setAttribute('src', 'https://cdn.streamify.io/liveshopping.min.js')
-        //     script.onload = () => {
-        //         this.scriptLoaded = true;
-        //         this.initializeStreamify();
-        //     };
-        //     document.head.appendChild(script);
-        // } else {
-        //     this.initializeStreamify()
-        // }
-    },
+    mounted() {},
     methods: {
         initializeStreamify(){
         /* eslint-disable */
