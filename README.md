@@ -62,6 +62,29 @@ else if (this.type === 'Streamify Player') {return 'CaWidgetStreamify';}
 
 ## Usage
 
+
+```Javascript
+{
+    "displayName": "{JSON}",
+    "active": true,
+    "html": "{\n    \"type\": \"Streamify Player\",\n    \"data\": {\n        \"id\": \"AQeDFGBdSx3\",\n        \"orientation\": \"portrait\",\n        \"buttonText\": \"text text text\"\n    }\n}",
+    "css": null,
+    "classNames": "half",
+    "id": "AQeDFGBdSx3",
+    "orientation": "portrait",
+    "buttonText": "text text text",
+    "family": "Frontpage",
+    "areaName": "The front page area",
+    "widgetAlias": "",
+    "displaySetting": "desktop",
+    "filters": [],
+    "preview": false,
+    "customerType": "ORGANIZATION",
+    "url": ""
+}
+```
+
+
 ## Development
 
 ## License

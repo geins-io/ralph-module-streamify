@@ -32,7 +32,9 @@
     }),
     computed: {},
     watch: {},
-    mounted() {},
+    mounted() {
+      console.log('vidar', this.configuration)
+    },
     methods: {
         initializeStreamify(){
           console.log('vidar')
