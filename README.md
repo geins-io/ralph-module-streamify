@@ -82,6 +82,15 @@ else if (this.type === 'Streamify Player') {return 'CaWidgetStreamify';}
     "customerType": "ORGANIZATION",
     "url": ""
 }
+
+{
+    "type": "Streamify Player",
+    "data": {
+        "id": "AQeDFGBdSx3",
+        "orientation": "portrait",
+        "buttonText": "text text text"
+    }
+}
 ```
 
 

@@ -33,7 +33,7 @@
     computed: {},
     watch: {},
     mounted() {
-      console.log('vidar', this.configuration)
+      console.log('vidar', this.configuration.html)
     },
     methods: {
         initializeStreamify(){
