@@ -35,6 +35,7 @@
     mounted() {},
     methods: {
         initializeStreamify(){
+          console.log('vidar')
         /* eslint-disable */
         const player = document.querySelector(`#${this.configuration.id}`);
         player.addEventListener('cart.add',({ detail: [productData, callback] }) => {
@@ -52,5 +53,4 @@
   };
   </script>
   <style lang="scss">
-  @import 'organisms/ca-streamify';
   </style>
