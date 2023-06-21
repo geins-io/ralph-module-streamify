@@ -67,7 +67,7 @@ The CaWidgetStreamify component takes a configuration prop. For more info visit 
 ```Javascript
 {
     id: String, // required. Streamify video id 
-    orientation: String, // portrait/landscape
+    orientation: String, // portrait/landscape. Defauls to portrait
     buttonText: String, // defaults to broadcast title if not set or used
     autoStart: Boolean, // default: false. Opens minified player if broadcast is live
     googleAnalytics: Boolean, //default: false. Enable Google Analytics integration

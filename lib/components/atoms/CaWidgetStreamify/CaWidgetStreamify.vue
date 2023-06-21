@@ -41,11 +41,10 @@
     computed: {},
     watch: {},
     mounted() {
-      console.log('vidar', this.configuration.html)
+      this.initializeStreamify()
     },
     methods: {
         initializeStreamify(){
-          console.log('vidar')
         /* eslint-disable */
         const player = document.querySelector(`#${this.configuration.id}`);
         player.addEventListener('cart.add',({ detail: [productData, callback] }) => {
