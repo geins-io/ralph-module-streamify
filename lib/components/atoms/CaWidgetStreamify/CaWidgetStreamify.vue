@@ -16,6 +16,11 @@
   export default {
     name: 'CaWidgetStreamify',
     mixins: [MixAddToCart],
+    head() {
+      return {
+        script: [{hid: 'streamify',  src: 'https://cdn.streamify.io/liveshopping.min.js'}]
+      }
+    },
     props: {
       configuration: {
         type: Object,
@@ -28,17 +33,17 @@
     computed: {},
     watch: {},
     mounted() {
-        if (!this.scriptLoaded) {
-            const script = document.createElement('script');
-            script.setAttribute('src', 'https://cdn.streamify.io/liveshopping.min.js')
-            script.onload = () => {
-                this.scriptLoaded = true;
-                this.initializeStreamify();
-            };
-            document.head.appendChild(script);
-        } else {
-            this.initializeStreamify()
-        }
+        // if (!this.scriptLoaded) {
+        //     const script = document.createElement('script');
+        //     script.setAttribute('src', 'https://cdn.streamify.io/liveshopping.min.js')
+        //     script.onload = () => {
+        //         this.scriptLoaded = true;
+        //         this.initializeStreamify();
+        //     };
+        //     document.head.appendChild(script);
+        // } else {
+        //     this.initializeStreamify()
+        // }
     },
     methods: {
         initializeStreamify(){
