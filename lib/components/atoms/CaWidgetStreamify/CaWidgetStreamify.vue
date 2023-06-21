@@ -1,12 +1,20 @@
 <template>
-    <div class="ca-widget-streamify">
-        <streamify-liveshopping 
-        :id="configuration.id" 
-        :orientation="configuration.orientation" 
-        :button-text="configuration.buttonText"
-        >
+  <div class="ca-widget-streamify">
+    <streamify-liveshopping 
+      :id="configuration.id" 
+      :button-text="configuration.buttonText"
+      :orientation="configuration.orientation" 
+      :autostart-if-live="configuration.autoStart"
+      :ga="configuration.googleAnalytics"
+      :hide-button="configuration.hideButton"
+      :hide-calendar="configuration.hideCalendar"
+      :hide-title="configuration.hideTitle"
+      :info-button="configuration.infoButton"
+      :persistent="configuration.persistent"
+      :play-button="configuration.playButton"
+    >
     </streamify-liveshopping>
-</div>
+  </div>
 </template>
   <script>
   /* 

@@ -62,34 +62,21 @@ else if (this.type === 'Streamify Player') {return 'CaWidgetStreamify';}
 
 ## Usage
 
+The CaWidgetStreamify component takes a configuration prop. For more info visit Streamify Developer docs (https://developer.streamify.io/)
 
 ```Javascript
 {
-    "displayName": "{JSON}",
-    "active": true,
-    "html": "{\n    \"type\": \"Streamify Player\",\n    \"data\": {\n        \"id\": \"AQeDFGBdSx3\",\n        \"orientation\": \"portrait\",\n        \"buttonText\": \"text text text\"\n    }\n}",
-    "css": null,
-    "classNames": "half",
-    "id": "AQeDFGBdSx3",
-    "orientation": "portrait",
-    "buttonText": "text text text",
-    "family": "Frontpage",
-    "areaName": "The front page area",
-    "widgetAlias": "",
-    "displaySetting": "desktop",
-    "filters": [],
-    "preview": false,
-    "customerType": "ORGANIZATION",
-    "url": ""
-}
-
-{
-    "type": "Streamify Player",
-    "data": {
-        "id": "AQeDFGBdSx3",
-        "orientation": "portrait",
-        "buttonText": "text text text"
-    }
+    id: String, // required. Streamify video id 
+    orientation: String, // portrait/landscape
+    buttonText: String, // defaults to broadcast title if not set or used
+    autoStart: Boolean, // default: false. Opens minified player if broadcast is live
+    googleAnalytics: Boolean, //default: false. Enable Google Analytics integration
+    hideButton: Boolean, // default: false
+    hideCalendar: Boolean, // default: false
+    hideTitle: Boolean, // default: false
+    infoButton: Boolean, // defualt: true
+    persistent: Boolean,  // default: false. The player is persited as a mini-player on the site as the user navigates between pages.
+    playButton: Boolean  // default: false
 }
 ```
 
