@@ -1,7 +1,7 @@
 {
-  "name": "ralph-module-streamify",
+  "name": "@geins/ralph-module-streamify",
   "version": "1.0.0",
-  "description": "Boilerplate for creating a module for Geins PWA strorefront",
+  "description": "Geins module for Streamify",
   "author": {
     "name": "arvidsson-geins"
   },

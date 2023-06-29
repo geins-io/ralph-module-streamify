@@ -1,7 +1,7 @@
 <template>
-  <div class="ca-widget-streamify" ref="swidget">
+  <div class="ca-widget-streamify" ref="swidget" v-if="streamId">
     <streamify-liveshopping
-      v-if="streamId"      
+      v-if="streamId"
       :id="streamId"
       ref="streamifyPlayer"
       :orientation="playerConfiguration.orientation"
@@ -20,16 +20,14 @@
 </template>
 <script>
 /* 
-    Streamify 
-
-     "id": "AQeDFGBdSx3",
+    Streamify Live Shopping Widget 
 */
+// import dependencies to use the add to cart event
 import MixAddToCart from 'MixAddToCart';
-import MixStreamify from 'MixStreamify';
 
 export default {
   name: 'CaWidgetStreamify',
-  mixins: [MixAddToCart, MixStreamify],
+  mixins: [MixAddToCart],
   props: {
     // Configuration object to the widget to set properties
     configuration: {
@@ -91,13 +89,10 @@ export default {
     }
   },
   data: () => ({
-    scriptLoaded: false,
-    token: 'QqtJqDJHvHPRc6PHwefj5qrNKUamiw6yk8NYsaGl',
-    streamId: '',
+    streamId: ''
   }),
   computed: {
     playerConfiguration() {
-      console.log('CaWidgetStreamify playerConfiguration()', this.configuration)
       return {
         id: this.configuration?.id ?? this.id,
         orientation: this.configuration.orientation ?? this.orientation,
@@ -111,7 +106,7 @@ export default {
         hideTitle: this.configuration['hide-title'] ?? this.hideTitle,
         infoButton: this.configuration['info-button'] ?? this.infoButton
       };
-    }   
+    }
   },
   watch: {
     configuration(val) {
@@ -119,27 +114,26 @@ export default {
       }
     },
     streamId(val) {
-      if (val) {        
+      if (val) {
       }
     }
   },
-  mounted() {
+  async mounted() {
     // check if we have a streamId
-    if(this.playerConfiguration.id) {
+    if (this.playerConfiguration.id) {
       // we have a streamId, use it
-      this.streamId = this.playerConfiguration.id;      
+      this.streamId = this.playerConfiguration.id;
     } else {
       // we don't have a streamId, get the nearest future stream form streamify API
-      this.streamId =  this.getFutureStream();
+      this.streamId = await this.$streamify.getFutureStream();
     }
     // if we have a streamId, initialize the widget with event listeners
-    if(this.streamId) {
+    if (this.streamId) {
       this.$nextTick(this.initializeStreamify);
     } else {
       // we don't have a streamId, show error
-      console.log('CaWidgetStreamify: No streamId found');
+      this.$streamify.log('No Stream Id Found');
     }
-
     this.$emit('ready');
   },
   methods: {
@@ -214,7 +208,7 @@ export default {
       script: [
         {
           hid: 'streamify-liveshopping',
-          src: 'https://cdn.streamify.io/liveshopping.min.js'
+          src: 'https://cdn.streamify.io/liveshopping.min.js?origin=geins.io'
         }
       ]
     };
