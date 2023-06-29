@@ -2,6 +2,13 @@
 
 Module for using Streamify inside your Geins storefront.
 
+https://www.streamify.io/
+
+https://developer.streamify.io/#floating-player-js-introduction
+
+https://www.base64encode.org/
+
+
 ## Installation
 
 ### **Inside your project, run:**
