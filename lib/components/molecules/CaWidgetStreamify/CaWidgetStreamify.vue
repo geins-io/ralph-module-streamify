@@ -92,6 +92,7 @@ export default {
     streamId: ''
   }),
   computed: {
+    // get the player configuration from props or from the configuration object
     playerConfiguration() {
       return {
         id: this.configuration?.id ?? this.id,
@@ -108,16 +109,7 @@ export default {
       };
     }
   },
-  watch: {
-    configuration(val) {
-      if (val) {
-      }
-    },
-    streamId(val) {
-      if (val) {
-      }
-    }
-  },
+  watch: {},
   async mounted() {
     // check if we have a streamId
     if (this.playerConfiguration.id) {
@@ -156,51 +148,6 @@ export default {
           callback(cb);
         }
       );
-      player.addEventListener(
-        'cart.update',
-        ({ detail: [productData, callback] }) => {
-          if (productData) {
-            console.log('cart.update', productData);
-            // const skuId = Number(productData.parentId);
-            // const quantity = 1;
-            // this.addToCart(skuId, quantity);
-          }
-          const cb = {
-            success: true
-          };
-          callback(cb);
-        }
-      );
-      player.addEventListener(
-        'cart.remove',
-        ({ detail: [productData, callback] }) => {
-          if (productData) {
-            console.log('cart.update', productData);
-            // const skuId = Number(productData.parentId);
-            // const quantity = 1;
-            // this.addToCart(skuId, quantity);
-          }
-          const cb = {
-            success: true
-          };
-          callback(cb);
-        }
-      );
-      player.addEventListener(
-        'cart.checkout',
-        ({ detail: [productData, callback] }) => {
-          if (productData) {
-            console.log('cart.update', productData);
-            // const skuId = Number(productData.parentId);
-            // const quantity = 1;
-            // this.addToCart(skuId, quantity);
-          }
-          const cb = {
-            success: true
-          };
-          callback(cb);
-        }
-      );
     }
   },
   head() {
@@ -208,7 +155,7 @@ export default {
       script: [
         {
           hid: 'streamify-liveshopping',
-          src: 'https://cdn.streamify.io/liveshopping.min.js?origin=geins.io'
+          src: 'https://cdn.streamify.io/liveshopping.min.js'
         }
       ]
     };
