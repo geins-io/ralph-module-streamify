@@ -21,7 +21,7 @@ Module can be used in any page of your storefront and is configuerd to work with
 ### 1. Install the module
 
 ```bash
-npm i @geins/streamify-module
+npm i @geins/ralph-module-streamify
 ```
 
 ### 2. Add the module to your Geins PWA Storefront Ralph
