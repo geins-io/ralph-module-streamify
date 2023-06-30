@@ -26,7 +26,7 @@
 import MixAddToCart from 'MixAddToCart';
 
 export default {
-  name: 'CaWidgetStreamify',
+  name: 'GeinsWidgetStreamify',
   mixins: [MixAddToCart],
   props: {
     // Configuration object to the widget to set properties
@@ -93,6 +93,7 @@ export default {
   }),
   computed: {
     // get the player configuration from props or from the configuration object
+    
     playerConfiguration() {
       return {
         id: this.configuration?.id ?? this.id,
@@ -111,6 +112,8 @@ export default {
   },
   watch: {},
   async mounted() {
+    this.$streamify.log('GeinsWidgetStreamify mounted');
+
     // check if we have a streamId
     if (this.playerConfiguration.id) {
       // we have a streamId, use it
@@ -124,7 +127,7 @@ export default {
       this.$nextTick(this.initializeStreamify);
     } else {
       // we don't have a streamId, show error
-      this.$streamify.log('No Stream Id Found');
+      this.$streamify.log('No Stream Id Found - hide widget');
     }
     this.$emit('ready');
   },
