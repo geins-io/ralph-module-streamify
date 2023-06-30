@@ -57,28 +57,7 @@ export default {
   async mounted() {
     this.$emit('ready');
   },
-  methods: {
-    initializeStreamify() {
-      // get the player from DOM using streamId
-      const player = document.querySelector(`#${this.streamId}`);
-      // add event listeners
-      player.addEventListener(
-        'cart.add',
-        ({ detail: [productData, callback] }) => {
-          console.log('cart.add', productData);
-          if (productData) {
-            const skuId = Number(productData.parentId);
-            const quantity = 1;
-            this.addToCart(skuId, quantity);
-          }
-          const cb = {
-            success: true
-          };
-          callback(cb);
-        }
-      );
-    }
-  },
+  methods: {},
   head() {
     return {
       script: [
