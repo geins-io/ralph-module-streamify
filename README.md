@@ -71,7 +71,7 @@ Set the `widgetRenderTypesComponents` in your `nuxt.config.json` file to use the
       },
   }
 ...
-
+```
 
 ## Module Options
 
