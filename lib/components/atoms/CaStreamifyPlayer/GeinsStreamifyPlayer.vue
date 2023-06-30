@@ -104,9 +104,6 @@ export default {
   methods: {
     initializeStreamify() {
       // get the player from DOM using streamId
-      // const player = document.querySelector(`#${this.streamId}`);
-      this.$streamify.log('No Stream Id Found - hide player');
-    
       const player = document.querySelector('streamify-liveshopping');
       if(!player) {
         return;

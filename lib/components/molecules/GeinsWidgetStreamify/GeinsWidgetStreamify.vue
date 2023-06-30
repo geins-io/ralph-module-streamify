@@ -1,5 +1,5 @@
 <template>
-  <div class="ca-widget-streamify">
+  <div class="geins-widget-streamify">
     <GeinsStreamifyPlayer
       :id="playerConfiguration.id"      
       :orientation="playerConfiguration.orientation"
@@ -70,8 +70,3 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-.ca-widget-streamify {
-  $block: &;
-}
-</style>
