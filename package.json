@@ -1,10 +1,8 @@
 {
   "name": "@geins/ralph-module-streamify",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Streamify module for Geins PWA Storefront Ralph",
-  "author": {
-    "name": "arvidsson-geins"
-  },
+  "author": "arvidsson-geins",
   "keywords": [
     "vue",
     "nuxt",
@@ -15,6 +13,7 @@
   "scripts": {
     "dev": "nuxt test/fixture",
     "test": "jest",
+    "publish": "npm publish --access public",
     "test:unit": "jest --testRegex \"/test/unit/(.+)\\.test\\.js$\"",
     "test:system": "jest --testRegex \"/test/system/(.+)\\.test\\.js$\"",
     "test:coverage": "yarn test --coverage",
@@ -32,5 +31,17 @@
       "lib/**/*.{js,jsx}"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geins-io/ralph-module-streamify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geins-io/ralph-module-streamify/issues"
+  },
+  "homepage": "https://github.com/geins-io/ralph-module-streamify#readme"
 }

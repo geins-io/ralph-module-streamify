@@ -14,7 +14,7 @@ A module for Geins PWA Storefront Ralph that adds streamify liveshopping streams
 
 This module enables you to add streamify liveshopping streams to your storefront in seconds. You can add past, present or future streams.
 
-Module can be used in any page of your storefront and is configuerd to work with Geins Cart out-of-box. Module can be added via Geins CMS or any CMS of your choice.
+Module can be used in any page of your storefront and is configuerd to work with Geins Cart out-of-box for a seamless liveshopping experince. Module can be added via Geins CMS or any CMS of your choice.
 
 ## Installation
 
@@ -42,10 +42,6 @@ Add the module to your Geins PWA Storefront Ralph by adding the following line t
   ],
 ```
 
-### 3. CaWidgetJson
-
-### 3. If you already have overridden the CaWidgetJson
-
 ## Module Options
 
 Add extra options to module configuration in `nuxt.config.json` file.
@@ -59,24 +55,22 @@ Add extra options to module configuration in `nuxt.config.json` file.
 
 ## Usage
 
-Add component to desired page of your storefront. Either by cms or as a component. You can add id to the component to show a specific stream. If no id is added the component will show the next upcoming or live stream.
+Add to desired page of your storefront. Either by cms or as a component. You can add id to the component to show a specific stream. If no id is added the component will show the next upcoming or live stream.
 
-## Component
+## Components
+Module adds two components to your storefront. `GeinsStreamifyPlayer` and `GeinsWidgetStreamify`.
 
-Component name is `CaWidgetStreamify`.
+### GeinsStreamifyPlayer
+This component is used to show the streamify player. It is used by the `GeinsWidgetStreamify` component. You can use it directly in your page if you want to add the player directly to your page. If
 
-### Events
-
-The component emits events that translates to your Geins Cart.
-
-### Properties
+#### Properties
 
 The properties of the component are one to one with the [Streamify Floating Player API](https://developer.streamify.io/#floating-player-js-introduction). You can add any property to the component and it will be passed to the API.
 
 | Property        | Type    | Default Value | Required | Description                                                                                        |
 | --------------- | ------- | ------------- | -------- | -------------------------------------------------------------------------------------------------- |
-| configuration   | Object  | -             | No       | Configuration object to set properties for the widget                                              |
-| id              | String  | -             | Yes      | The ID of the stream                                                                               |
+| configuration   | Object  | -             | No       | Configuration object to set properties for the widget. Used by  `GeinsWidgetStreamify`             |
+| id              | String  | -             | NO       | The ID of the stream. If no ID is present player takes the nearest upcomming stream                |
 | orientation     | String  | 'landscape'   | No       | The orientation of the player. Possible values: 'landscape' or 'portrait'                          |
 | playButton      | Boolean | false         | No       | Determines whether to show the play button                                                         |
 | autoStart       | Boolean | false         | No       | Opens the minified player if the broadcast is live                                                 |
@@ -88,9 +82,29 @@ The properties of the component are one to one with the [Streamify Floating Play
 | hideTitle       | Boolean | false         | No       | Determines whether to hide the title in the banner                                                 |
 | infoButton      | Boolean | true          | No       | Determines whether to display an info button if the broadcast has a description                    |
 
-_The `configuration` object will be overriden by any property added to the component._
+#### Use as a component or with any CMS
 
-### Use with Geins CMS
+Add the component to your page. Add the id of the stream you want to show as a property to the component. You can find the id in the Streamify App or in the Streamify.
+
+```vue
+<GeinsStreamifyPlayer id="your-stream-id" />
+```
+
+
+### GeinsWidgetStreamify
+The widget is a wrapper around the `GeinsStreamifyPlayer` component. It is used to add the component via CMS. It is not needed if you add the component directly to your page.
+
+#### Properties
+
+The properties of the component are one to one with the [Streamify Floating Player API](https://developer.streamify.io/#floating-player-js-introduction). You can add any property to the component and it will be passed to the API.
+
+| Property        | Type    | Default Value | Required | Description                                                                                        |
+| --------------- | ------- | ------------- | -------- | -------------------------------------------------------------------------------------------------- |
+| configuration   | Object  | -             | No       | Configuration object to set properties for the `GeinsStreamifyPlayer`                              |
+
+`Configuration` property is parsed by [@geins/ralph-module-cms-json-container](https://www.npmjs.com/package/@geins/ralph-module-cms-json-container).
+
+#### Use with Geins CMS
 
 Add a `JSON Widget` to your page in the [Geins CMS](https://docs.geins.io/docs/launchpads/web/content). Add the following JSON to your widget. Replace `your-stream-id` with the id of the stream you want to show. You can find the id in the Streamify App or in the Streamify.
 
@@ -107,17 +121,10 @@ Add a `JSON Widget` to your page in the [Geins CMS](https://docs.geins.io/docs/l
 }
 ```
 
-All properties of the Stremify Floating Player JS can be added to the JSON. Read documentation [here](https://developer.streamify.io/#floating-player-js-introduction). Use the same name as in the streamify documentation to add properties to the JSON. The data part of the JSON is passed to the component as the `configuration` property.
+All properties of the Stremify Floating Player JS can be added to the JSON. Read documentation [here](https://developer.streamify.io/#floating-player-js-introduction). Use the same name as in the streamify documentation to add properties to the JSON.
 
 _If you want to show the next upcoming or live stream, remove the `id` property from the JSON._
 
-### As a component or with any CMS
-
-Add the component to your page. Add the id of the stream you want to show as a property to the component. You can find the id in the Streamify App or in the Streamify.
-
-```vue
-<CaStreamify id="your-stream-id" />
-```
 
 ### Tips!
 
