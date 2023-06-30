@@ -2,8 +2,7 @@
 [![NPM Downloads][npm-downloads-per-month]][npm-trends]
 
 [![nuxt-content](https://raw.githubusercontent.com/geins-io/resources/master/images/banners/repos/liveshopping.jpg)](https://www.geins.io)
-
-# Live shopping module for Geins PWA Storefront Ralph
+# Live shopping module for Geins PWA Storefront
 
 A module for Geins PWA Storefront Ralph that adds Streamify live shopping streams to your storefront in seconds.
 
