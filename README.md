@@ -28,18 +28,18 @@ npm i @geins/streamify-module
 
 Add the module to your Geins PWA Storefront Ralph by adding the following line to your `nuxt.config.json` file:
 
-```json
+```js
 ...
   modules: [
     [
-        '@geins/ralph-module-streamify',
-        {
-            enabled: true,
-            debug: true,
-            apiToken: 'your-streamify-api-token',
-        }
+      '@geins/ralph-module-streamify',
+      {
+          enabled: true,
+          debug: true,
+          apiToken: 'your-streamify-api-token'
+      }
     ]
-  ],
+  ]
 ```
 
 ## Module Options
