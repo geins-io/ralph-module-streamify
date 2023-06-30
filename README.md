@@ -3,18 +3,18 @@
 
 # Streamify module for Geins PWA Storefront Ralph
 
-A module for Geins PWA Storefront Ralph that adds streamify liveshopping streams to your storefront.
+A module for Geins PWA Storefront Ralph that adds streamify liveshopping streams to your storefront in seconds.
 
 ## Pre-requisites
 
 - Geins Account and PWA Storefront Ralph. [Get a free trial here](https://www.geins.io)
-- Streamify Account. [Get a one here](https://www.streamify.io/)
+- Streamify Account. [Get account here](https://www.streamify.io/)
 
 ## Description
 
 This module enables you to add streamify liveshopping streams to your storefront in seconds. You can add past, present or future streams.
 
-Module can be used in any page of your storefront and is configuerd to work with Geins Cart out-of-box for a seamless liveshopping experince. Module can be added via Geins CMS or any CMS of your choice.
+Module can be used in any page of your storefront and is configuerd to work with the Geins Cart and CMS out-of-box for a seamless experince for both admins and shoppers. Module can be added via Geins CMS, CMS of your choice or as a Compnent.
 
 ## Installation
 
@@ -41,6 +41,36 @@ Add the module to your Geins PWA Storefront Ralph by adding the following line t
     ]
   ]
 ```
+
+### To use with Geins CMS with no coding
+
+#### 1. Add the module to your Geins PWA Storefront Ralph
+Use the [@geins/ralph-module-cms-json-container](https://www.npmjs.com/package/@geins/ralph-module-cms-json-container)
+
+```bash
+npm i @geins/ralph-module-cms-json-container
+```
+
+#### 2. Add the module to your Geins PWA Storefront Ralph
+
+Add module to your `nuxt.config.json` file:
+```js
+...
+    modules: [
+      '@geins/ralph-module-cms-json-container'
+    ]
+..
+``` 
+Set the `widgetRenderTypesComponents` in your `nuxt.config.json` file to use the `GeinsWidgetJsonContainer` component for the `JSON` widget type.
+```js
+...
+  publicRuntimeConfig: {
+      widgetRenderTypesComponents: {
+        JSON: 'GeinsWidgetJsonContainer'
+      },
+  }
+...
+
 
 ## Module Options
 

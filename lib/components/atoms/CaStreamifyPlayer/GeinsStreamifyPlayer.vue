@@ -105,6 +105,9 @@ export default {
     initializeStreamify() {
       // get the player from DOM using streamId
       const player = document.querySelector(`#${this.streamId}`);
+      if(!player) {
+        return;
+      }
       // add event listeners
       player.addEventListener(
         'cart.add',
