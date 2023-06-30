@@ -1,7 +1,7 @@
 {
   "name": "@geins/ralph-module-streamify",
-  "version": "1.0.0",
-  "description": "Geins module for Streamify",
+  "version": "1.0.2",
+  "description": "Streamify module for Geins PWA Storefront Ralph",
   "author": {
     "name": "arvidsson-geins"
   },
@@ -32,7 +32,5 @@
       "lib/**/*.{js,jsx}"
     ]
   },
-  "dependencies": {
-    "consola": "^2.3.2"
-  }
+  "dependencies": {}
 }
