@@ -18,7 +18,7 @@
 </template>
 <script>
 /* 
-  (Description of component) 
+  Streamify Live Shopping Player
 */
 export default {
   name: 'GeinsStreamifyPlayer',
