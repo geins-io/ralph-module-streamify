@@ -20,6 +20,9 @@
 /* 
   Streamify Live Shopping Player
 */
+// import dependencies to use the add to cart event
+import MixAddToCart from 'MixAddToCart';
+
 export default {
   name: 'GeinsStreamifyPlayer',
   mixins: [],

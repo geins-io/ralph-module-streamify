@@ -17,10 +17,8 @@
 </template>
 <script>
 /* 
-    Streamify Live Shopping Widget 
+    Streamify Live Shopping Widget for CMS
 */
-// import dependencies to use the add to cart event
-import MixAddToCart from 'MixAddToCart';
 
 export default {
   name: 'GeinsWidgetStreamify',
@@ -58,15 +56,5 @@ export default {
     this.$emit('ready');
   },
   methods: {},
-  head() {
-    return {
-      script: [
-        {
-          hid: 'streamify-liveshopping',
-          src: 'https://cdn.streamify.io/liveshopping.min.js'
-        }
-      ]
-    };
-  }
 };
 </script>

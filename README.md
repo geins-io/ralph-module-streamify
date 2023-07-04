@@ -19,7 +19,10 @@ A module for Geins PWA Storefront Ralph that adds Streamify live shopping stream
 
 This module enables you to add streamify liveshopping streams to your storefront in seconds. You can add past, present or future streams.
 
-Module can be used in any page of your storefront and is configuerd to work with the Geins Cart and CMS out-of-box for a seamless experince for both admins and shoppers. Module can be added via Geins CMS, CMS of your choice or as a Compnent.
+Module can be used in any page of your storefront and is configuerd to work with the Geins Cart and CMS out-of-box for a seamless experince for both admins and shoppers. Module can be added via Geins CMS, CMS of your choice or as a Component.
+
+- Supply the streamify stream id to show a specific stream
+- If no stream id is supplied the module will show the next upcoming or live stream
 
 ## Installation
 
