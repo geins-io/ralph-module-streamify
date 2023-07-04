@@ -22,7 +22,6 @@
 
 export default {
   name: 'GeinsWidgetStreamify',
-  mixins: [MixAddToCart],
   props: {
     // Configuration object to the widget to set properties
     configuration: {

@@ -25,7 +25,7 @@ import MixAddToCart from 'MixAddToCart';
 
 export default {
   name: 'GeinsStreamifyPlayer',
-  mixins: [],
+  mixins: [MixAddToCart],
   props: {
     // Id of stream
     id: {
