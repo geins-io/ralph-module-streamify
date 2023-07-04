@@ -128,16 +128,6 @@ export default {
         }
       );
     }
-  },
-  head() {
-    return {
-      script: [
-        {
-          hid: 'streamify-liveshopping',
-          src: 'https://cdn.streamify.io/liveshopping.min.js'
-        }
-      ]
-    };
   }
 };
 </script>
