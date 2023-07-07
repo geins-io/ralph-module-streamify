@@ -1,5 +1,6 @@
 [![NPM Package][npm]][npm-url]
 [![NPM Downloads][npm-downloads-per-month]][npm-trends]
+![Geins][mit-shield]
 
 [![Start Geins Free Trial][geins-tiral-img]][geins-tiral-url] [![Geins Docs][geins-docs-img]][geins-docs-url]
 
@@ -37,6 +38,8 @@ npm i @geins/ralph-module-streamify
 Add the module to your Geins PWA Storefront Ralph by adding the following line to your `nuxt.config.json` file:
 
 ```js
+// nuxt.config.js
+
 ...
   modules: [
     [
@@ -50,7 +53,7 @@ Add the module to your Geins PWA Storefront Ralph by adding the following line t
   ]
 ```
 
-### To use with Geins CMS with no coding
+## To use with Geins CMS (no-code)
 
 #### 1. Add the module to your Geins PWA Storefront Ralph
 Use the [@geins/ralph-module-cms-json-container](https://www.npmjs.com/package/@geins/ralph-module-cms-json-container)
@@ -71,6 +74,7 @@ Add module to your `nuxt.config.json` file:
 ``` 
 Set the `widgetRenderTypesComponents` in your `nuxt.config.json` file to use the `GeinsWidgetJsonContainer` component for the `JSON` widget type.
 ```js
+// nuxt.config.js
 ...
   publicRuntimeConfig: {
       widgetRenderTypesComponents: {
@@ -99,7 +103,7 @@ Add to desired page of your storefront. Either by cms or as a component. You can
 Module adds two components to your storefront. `GeinsStreamifyPlayer` and `GeinsWidgetStreamify`.
 
 ### GeinsStreamifyPlayer
-This component is used to show the streamify player. It is used by the `GeinsWidgetStreamify` component. You can use it directly in your page if you want to add the player directly to your page. If
+This component is used to show the streamify player. It is used by the `GeinsWidgetStreamify` component. You can use it directly in your page if you want to add the player directly to your page.
 
 #### Properties
 
@@ -178,3 +182,5 @@ _If you want to show the next upcoming or live stream, remove the `id` property 
 [geins-docs-img]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/geins-io/resources/master/sheilds/geins-docs-read-v3.json
 [geins-tiral-url]: https://www.geins.io
 [geins-tiral-img]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/geins-io/resources/master/sheilds/geins-fee-tiral.json
+[mit-shield]: https://img.shields.io/badge/license-MIT-green
+[mit-url]: https://en.wikipedia.org/wiki/MIT_License

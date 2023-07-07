@@ -19,7 +19,6 @@
 /* 
     Streamify Live Shopping Widget for CMS
 */
-
 export default {
   name: 'GeinsWidgetStreamify',
   props: {
