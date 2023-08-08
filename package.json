@@ -40,8 +40,5 @@
     "type": "git",
     "url": "git+https://github.com/geins-io/ralph-module-streamify.git"
   },
-  "bugs": {
-    "url": "https://github.com/geins-io/ralph-module-streamify/issues"
-  },
   "homepage": "https://github.com/geins-io/ralph-module-streamify#readme"
 }
